@@ -1,11 +1,12 @@
 package com.example.torneo;
 
-import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 public class Participantes {
     private final SimpleIntegerProperty ranking;
@@ -19,8 +20,8 @@ public class Participantes {
     public Participantes(int ranking, String nombre, int FIDE, int IDFIDE, String origen, String hotel, String torneo) {
         this.ranking = new SimpleIntegerProperty(ranking);
         this.nombre = new SimpleStringProperty(nombre);
-        this.FIDE = new SimpleIntegerProperty(FIDE);;
-        this.IDFIDE = new SimpleIntegerProperty(IDFIDE);;
+        this.FIDE = new SimpleIntegerProperty(FIDE);
+        this.IDFIDE = new SimpleIntegerProperty(IDFIDE);
         this.origen = new SimpleStringProperty(origen);
         this.hotel = new SimpleStringProperty(hotel);
         this.torneo = new SimpleStringProperty(torneo);
@@ -121,22 +122,14 @@ public class Participantes {
         return rs;
     }
 
-    public static void mostrarB() throws SQLException {
+    public static ResultSet mostrarB() throws SQLException {
         Connection cnx = conexion.getConnexion();
         Statement stm = cnx.createStatement();
         ResultSet rs2 = stm.executeQuery("select * from participantes WHERE torneo='B' order by ranking");
 
-        while (rs2.next()) {
-            int ranking = rs2.getInt(1);
-            String nombre = rs2.getString(2);
-            int fide = rs2.getInt(3);
-            int idfide = rs2.getInt(4);
-            String origen = rs2.getString(5);
-            String hotel = rs2.getString(6);
-            String torneo = rs2.getString(7);
-            System.out.println(ranking + " " + nombre + " " + fide + " " + idfide + " " + origen + " " + hotel + " " + torneo);
-        }
         rs2.close();
         stm.close();
+
+        return rs2;
     }
 }

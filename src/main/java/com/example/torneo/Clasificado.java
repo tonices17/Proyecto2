@@ -107,4 +107,15 @@ public class Clasificado {
 
         return rs;
     }
+
+    public static ResultSet clasificacionB() throws SQLException {
+        Connection cnx = conexion.getConnexion();
+        Statement stm = cnx.createStatement();
+        ResultSet rs = stm.executeQuery("select * from clasificacion WHERE torneo='B' order by posicion");
+
+        rs.close();
+        stm.close();
+
+        return rs;
+    }
 }

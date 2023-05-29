@@ -8,3 +8,8 @@
     -fx-background-repeat: no-repeat;
 }
 
+#paneOpenB{
+    -fx-background-image: url("OpenB.png");
+    -fx-background-repeat: no-repeat;
+}
+

@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class conexion {
     public static Connection getConnexion() throws SQLException {
-        String url = "jdbc:mariadb://localhost:3306/torneo?allowMultiQueries=true";
+        String url = "jdbc:mariadb://localhost:3306/torneo";
         String user = "root";
         String password = "root";
         return DriverManager.getConnection(url, user, password);

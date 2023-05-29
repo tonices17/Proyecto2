@@ -33,7 +33,7 @@ public class HelloApplication extends Application {
     }
 
     public static void main(String[] args) throws SQLException {
-        BaseDatos.importarbase();
+        datos.importarbase();
         launch();
     }
 

@@ -6,11 +6,26 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
 
 public class datos {
+    public static void importarbase() throws SQLException {
+        Connection cnx = conexion.getConnexion();
+        Statement stm = cnx.createStatement();
+        ResultSet rs = stm.executeQuery("drop database if exists torneo");
+        ResultSet rs2 = stm.executeQuery("Create database torneo");
+        ResultSet rs3 = stm.executeQuery("use torneo");
+        ResultSet rs4 = stm.executeQuery("CREATE TABLE participantes(ranking int, nombre varchar(50), fide int(20), fideid int(20), origen varchar (50), hotel varchar(50), torneo varchar(50), PRIMARY KEY (ranking, torneo))");
+        ResultSet rs5 = stm.executeQuery("CREATE TABLE clasificacion (posicion int, torneo varchar(50), ranking int, nombre varchar(50), fide int, origen varchar(50), PRIMARY KEY (posicion, torneo), FOREIGN KEY (ranking) REFERENCES participantes (ranking))");
+        ResultSet rs6 = stm.executeQuery("CREATE TABLE premios (id int, posicion int, torneo varchar(50), tipo_premio varchar(50), ganador varchar(50), cantidad int, FOREIGN KEY (posicion, torneo) REFERENCES clasificacion (posicion, torneo), PRIMARY KEY (posicion, tipo_premio, torneo))");
+        rs.close();
+        rs2.close();
+        rs3.close();
+        rs4.close();
+        rs5.close();
+        rs6.close();
+        stm.close();
+    }
     public static void importarParticipantes() throws SQLException, IOException {
         BufferedReader br = null;
         BufferedReader br2 = null;
@@ -26,8 +41,7 @@ public class datos {
         } finally {
             if (br != null)
                 try {
-                    br.close();
-                    br2.close(); //muy importante cerrar el fichero cuando se hayan realizado las operaciones
+                    br.close(); //muy importante cerrar el fichero cuando se hayan realizado las operaciones
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -79,8 +93,7 @@ public class datos {
         } finally {
             if (br != null)
                 try {
-                    br.close();
-                    br2.close(); //muy importante cerrar el fichero cuando se hayan realizado las operaciones
+                    br.close(); //muy importante cerrar el fichero cuando se hayan realizado las operaciones
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -128,8 +141,7 @@ public class datos {
         } finally {
             if (br != null)
                 try {
-                    br.close();
-                    br2.close(); //muy importante cerrar el fichero cuando se hayan realizado las operaciones
+                    br.close(); //muy importante cerrar el fichero cuando se hayan realizado las operaciones
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -138,26 +150,46 @@ public class datos {
     public static void insertPremios(BufferedReader br ) throws IOException, SQLException {
         String linea;
         Connection cnx = conexion.getConnexion();
-        PreparedStatement pstm = cnx.prepareStatement("Insert into premios values (?,?,?,?,?)");
+        PreparedStatement pstm = cnx.prepareStatement("Insert into premios (id, posicion, torneo, tipo_premio, ganador, cantidad) values (?,?,?,?,?,?)");
         while ((linea = br.readLine()) != null) {
             String[] partes = linea.split("\\|");
             if (Character.isDigit(linea.charAt(1))) {
-                String posicion = partes[0];
-                String torneo = partes[1];
-                String tipo_premio = partes[2];
-                String ganador = partes[3];
-                String cantidad = partes[4];
-                pstm.setInt(1, Integer.parseInt(posicion.substring(1, posicion.length() - 1)));
-                pstm.setString(2, torneo.substring(1, torneo.length() - 1));
-                pstm.setString(3, tipo_premio.substring(1, tipo_premio.length() - 1));
+                String id = partes[0];
+                String posicion = partes[1];
+                String torneo = partes[2];
+                String tipo_premio = partes[3];
+                String ganador = partes[4];
+                String cantidad = partes[5];
+                pstm.setInt(1, Integer.parseInt(id.substring(1, id.length() - 1)));
+                pstm.setInt(2, Integer.parseInt(posicion.substring(1, posicion.length() - 1)));
+                pstm.setString(3, torneo.substring(1, torneo.length() - 1));
+                pstm.setString(4, tipo_premio.substring(1, tipo_premio.length() - 1));
                 if (!ganador.isEmpty()) {
-                    pstm.setString(4, ganador.substring(1, ganador.length() - 1));
+                    pstm.setString(5, ganador.substring(1, ganador.length() - 1));
                 } else {
-                    pstm.setString(4, ganador);
+                    pstm.setString(5, ganador);
                 }
-                pstm.setInt(5, Integer.parseInt(cantidad.substring(1, cantidad.length() - 1)));
+                pstm.setInt(6, Integer.parseInt(cantidad.substring(1, cantidad.length() - 1)));
                 pstm.executeUpdate();
             }
         }
+    }
+
+    public static void importarbase2() throws SQLException {
+        Connection cnx = conexion.getConnexion();
+        Statement stm = cnx.createStatement();
+        ResultSet rs = stm.executeQuery("drop table if exists optaA");
+        ResultSet rs2 = stm.executeQuery("create table optaA as select c.posicion, pa.nombre, pa.fide, pa.origen, pa.hotel from participantes pa left join clasificacion c on pa.nombre = c.nombre where pa.torneo = 'A' order by c.posicion");
+        ResultSet rs3 = stm.executeQuery("drop table if exists optaB");
+        ResultSet rs4 = stm.executeQuery("create table optaB as select c.posicion, pa.nombre, pa.fide, pa.origen, pa.hotel from participantes pa left join clasificacion c on pa.nombre = c.nombre where pa.torneo = 'B' order by c.posicion");
+        ResultSet rs5 = stm.executeQuery("drop table if exists premiosfinales");
+        ResultSet rs6 = stm.executeQuery("CREATE TABLE premiosfinales (id int, nombre varchar(50), tipo_premio varchar(50), cantidad int)");
+        rs.close();
+        rs2.close();
+        rs3.close();
+        rs4.close();
+        rs5.close();
+        rs6.close();
+        stm.close();
     }
 }

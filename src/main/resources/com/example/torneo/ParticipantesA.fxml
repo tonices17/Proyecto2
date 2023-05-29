@@ -3,7 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1055.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.torneo.ControlParticipantesA">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1055.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.torneo.ControlParticipantes">
     <ScrollPane layoutX="20.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="1018.0">
         <content>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="550.0" prefWidth="1018.0">
@@ -22,5 +22,7 @@
                 </children></AnchorPane>
         </content>
     </ScrollPane>
-   <Button graphicTextGap="5.0" layoutX="425.0" layoutY="575.0" mnemonicParsing="false" onAction="#insertarFilas" prefHeight="50" prefWidth="200" style="-fx-background-color: white; -fx-border-radius: 5px; -fx-border-color: black;" text="INSERTAR PARTICIPANTES" textAlignment="CENTER" />
+   <Button graphicTextGap="5.0" layoutX="425.0" layoutY="575.0" mnemonicParsing="false" onAction="#insertarFilasA" prefHeight="50" prefWidth="200" style="-fx-background-color: white; -fx-border-radius: 5px; -fx-border-color: black;" text="MOSTRAR PARTICIPANTES" textAlignment="CENTER" />
+   <Button graphicTextGap="5.0" layoutX="100.0" layoutY="580.0" mnemonicParsing="false" onAction="#añadirParticipante" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: white; -fx-border-radius: 5px; -fx-border-color: black;" text="AÑADIR" textAlignment="CENTER" />
+   <Button graphicTextGap="5.0" layoutX="810.0" layoutY="580.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: white; -fx-border-radius: 5px; -fx-border-color: black;" text="ACTUALIZAR" textAlignment="CENTER" />
 </Pane>

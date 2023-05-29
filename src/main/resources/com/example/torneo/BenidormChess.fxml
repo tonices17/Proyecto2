@@ -8,22 +8,22 @@
    <children>
       <AnchorPane prefHeight="548.0" prefWidth="1455.0">
          <children>
-            <Button fx:id="botonImportar" graphicTextGap="5.0" layoutX="528.0" layoutY="100.0" mnemonicParsing="false" prefHeight="50" prefWidth="200" style="-fx-background-color: white; -fx-border-radius: 5px;" text="IMPORTAR DATOS" textAlignment="CENTER" onAction="#importButtonAction">
+            <Button fx:id="botonImportar" graphicTextGap="5.0" layoutX="528.0" layoutY="100.0" mnemonicParsing="false" prefHeight="50" prefWidth="200" style="-fx-background-color: white; -fx-border-radius: 5px; -fx-border-color: black;" text="IMPORTAR DATOS" textAlignment="CENTER" onAction="#importButtonAction">
                <font>
                   <Font name="JetBrains Mono Medium Italic" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="botonA" graphicTextGap="5.0" layoutX="528.0" layoutY="160.0" mnemonicParsing="false" prefHeight="50" prefWidth="200" style="-fx-background-color: white; -fx-border-radius: 5px;" text="OPEN A" textAlignment="CENTER" onAction="#ButtonA">
+            <Button fx:id="botonA" graphicTextGap="5.0" layoutX="528.0" layoutY="160.0" mnemonicParsing="false" prefHeight="50" prefWidth="200" style="-fx-background-color: white; -fx-border-radius: 5px; -fx-border-color: black;" text="OPEN A" textAlignment="CENTER" onAction="#ButtonA">
                <font>
                   <Font name="JetBrains Mono Medium Italic" size="18.0" />
                </font>
             </Button>
-            <Button graphicTextGap="5.0" layoutX="528.0" layoutY="220.0" mnemonicParsing="false" prefHeight="50" prefWidth="200" style="-fx-background-color: white; -fx-border-radius: 5px;" text="OPEN B" textAlignment="CENTER">
+            <Button graphicTextGap="5.0" layoutX="528.0" layoutY="220.0" mnemonicParsing="false" prefHeight="50" prefWidth="200" style="-fx-background-color: white; -fx-border-radius: 5px; -fx-border-color: black;" text="OPEN B" textAlignment="CENTER" onAction="#ButtonB">
                <font>
                   <Font name="JetBrains Mono Medium Italic" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="botonSalir" graphicTextGap="5.0" layoutX="528.0" layoutY="280.0" mnemonicParsing="false" prefHeight="50" prefWidth="200" style="-fx-background-color: white; -fx-border-radius: 5px;" text="SALIR" textAlignment="CENTER" onAction="#closeButtonAction">
+            <Button fx:id="botonSalir" graphicTextGap="5.0" layoutX="528.0" layoutY="280.0" mnemonicParsing="false" prefHeight="50" prefWidth="200" style="-fx-background-color: white; -fx-border-radius: 5px; -fx-border-color: black;" text="SALIR" textAlignment="CENTER" onAction="#closeButtonAction">
                <font>
                   <Font name="JetBrains Mono Medium Italic" size="18.0" />
                </font>

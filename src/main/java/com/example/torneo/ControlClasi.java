@@ -17,10 +17,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
-public class ControlClasiA implements Initializable {
+public class ControlClasi implements Initializable {
 
     @FXML
     private TableView<Clasificado> tablaA;
+    @FXML
+    private TableView<Clasificado> tablaB;
     @FXML
     private TableColumn<Clasificado, Integer> columPosicion;
     @FXML
@@ -36,7 +38,7 @@ public class ControlClasiA implements Initializable {
     private final ObservableList<Clasificado> data = FXCollections.observableArrayList();
     private int cont;
     @FXML
-    private void insertarFilas() throws SQLException, IOException {
+    private void insertarFilasA() throws SQLException, IOException {
         if(cont == 1){
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("ErrorImport.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
@@ -59,6 +61,34 @@ public class ControlClasiA implements Initializable {
                 data.add(clasificado);
             }
             tablaA.setItems(data);
+            cont++;
+        }
+    }
+
+    @FXML
+    private void insertarFilasB() throws SQLException, IOException {
+        if(cont == 1){
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("ErrorImport.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage stage = new Stage();
+            stage.setTitle("ERROR");
+            stage.setScene(scene);
+            stage.setResizable(false);
+            stage.show();
+        }
+        while(cont == 0) {
+            ResultSet rs = Clasificado.clasificacionB();
+            while (rs.next()) {
+                int posicion = rs.getInt(1);
+                String torneo = rs.getString(2);
+                int ranking = rs.getInt(3);
+                String nombre = rs.getString(4);
+                int fide = rs.getInt(5);
+                String origen = rs.getString(6);
+                Clasificado clasificado = new Clasificado(posicion, torneo, ranking, nombre, fide, origen);
+                data.add(clasificado);
+            }
+            tablaB.setItems(data);
             cont++;
         }
     }

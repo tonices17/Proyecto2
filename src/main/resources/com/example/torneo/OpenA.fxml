@@ -8,15 +8,15 @@
    <children>
       <AnchorPane prefHeight="400.0" prefWidth="600.0">
          <children>
-            <Button graphicTextGap="5.0" layoutX="300.0" layoutY="181.0" mnemonicParsing="false" prefHeight="50" prefWidth="200" style="-fx-background-color: white; -fx-border-radius: 5px;" text="PARTICIPANTES" textAlignment="CENTER" onAction="#mostrarParticipantesA">
+            <Button graphicTextGap="5.0" layoutX="300.0" layoutY="181.0" mnemonicParsing="false" prefHeight="50" prefWidth="200" style="-fx-background-color: white; -fx-border-radius: 5px; -fx-border-color: black;" text="PARTICIPANTES" textAlignment="CENTER" onAction="#mostrarParticipantesA">
                <font>
                   <Font name="JetBrains Mono Medium Italic" size="18.0" />
                </font></Button>
-            <Button graphicTextGap="5.0" layoutX="300.0" layoutY="250.0" mnemonicParsing="false" prefHeight="50" prefWidth="200" style="-fx-background-color: white; -fx-border-radius: 5px;" text="CLASIFICACIÓN" textAlignment="CENTER" onAction="#mostrarClasiA">
+            <Button graphicTextGap="5.0" layoutX="300.0" layoutY="250.0" mnemonicParsing="false" prefHeight="50" prefWidth="200" style="-fx-background-color: white; -fx-border-radius: 5px; -fx-border-color: black;" text="CLASIFICACIÓN" textAlignment="CENTER" onAction="#mostrarClasiA">
                <font>
                   <Font name="JetBrains Mono Medium Italic" size="18.0" />
                </font></Button>
-            <Button graphicTextGap="5.0" layoutX="300.0" layoutY="320.0" mnemonicParsing="false" prefHeight="50" prefWidth="200" style="-fx-background-color: white; -fx-border-radius: 5px;" text="PREMIOS" textAlignment="CENTER">
+            <Button graphicTextGap="5.0" layoutX="300.0" layoutY="320.0" mnemonicParsing="false" prefHeight="50" prefWidth="200" style="-fx-background-color: white; -fx-border-radius: 5px; -fx-border-color: black;" text="PREMIOS" textAlignment="CENTER" onAction="#mostrarPremiosA">
                <font>
                   <Font name="JetBrains Mono Medium Italic" size="18.0" />
                </font></Button>
