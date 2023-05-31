@@ -49,6 +49,7 @@ public class Actualizaciones implements Initializable {
                 pstm.setString(2, nombre);
                 pstm.executeUpdate();
             }
+            Datos.importarbase2();
             HelloApplication.mensajeExito();
         } catch (NullPointerException e) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
