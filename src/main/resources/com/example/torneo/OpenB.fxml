@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane id="paneOpenB" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.torneo.HelloController">
+    <children>
+        <AnchorPane prefHeight="400.0" prefWidth="600.0">
+            <children>
+                <Button graphicTextGap="5.0" layoutX="300.0" layoutY="181.0" mnemonicParsing="false" prefHeight="50" prefWidth="200" style="-fx-background-color: white; -fx-border-radius: 5px; -fx-border-color: black;" text="PARTICIPANTES" textAlignment="CENTER" onAction="#mostrarParticipantesB">
+                    <font>
+                        <Font name="JetBrains Mono Medium Italic" size="18.0" />
+                    </font></Button>
+                <Button graphicTextGap="5.0" layoutX="300.0" layoutY="250.0" mnemonicParsing="false" prefHeight="50" prefWidth="200" style="-fx-background-color: white; -fx-border-radius: 5px; -fx-border-color: black;" text="CLASIFICACIÓN" textAlignment="CENTER" onAction="#mostrarClasiB">
+                    <font>
+                        <Font name="JetBrains Mono Medium Italic" size="18.0" />
+                    </font></Button>
+                <Button graphicTextGap="5.0" layoutX="300.0" layoutY="320.0" mnemonicParsing="false" prefHeight="50" prefWidth="200" style="-fx-background-color: white; -fx-border-radius: 5px; -fx-border-color: black;" text="PREMIOS" textAlignment="CENTER" onAction="#mostrarPremiosB">
+                    <font>
+                        <Font name="JetBrains Mono Medium Italic" size="18.0" />
+                    </font></Button>
+            </children></AnchorPane>
+    </children>
+</Pane>

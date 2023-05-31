@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1055.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.torneo.ControlPremios">
+    <ScrollPane layoutX="70.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="893.0">
+        <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="550.0" prefWidth="893.0">
+                <children>
+                    <TableView fx:id="tablaB" prefHeight="550.0" prefWidth="893.0">
+                        <columns>
+                            <TableColumn fx:id="columID" prefWidth="75.0" text="Id" />
+                            <TableColumn fx:id="columPosicion" prefWidth="75.0" text="Posición" />
+                            <TableColumn fx:id="columTorneo" prefWidth="100.0" text="Torneo" />
+                            <TableColumn fx:id="columTipoPremio" prefWidth="200.0" text="Tipo Premio" />
+                            <TableColumn fx:id="columGanador" prefWidth="300.0" text="Ganador" />
+                            <TableColumn fx:id="columCantidad" prefWidth="125.0" text="Cantidad" />
+                        </columns>
+                    </TableView>
+                </children></AnchorPane>
+        </content>
+    </ScrollPane>
+    <Button graphicTextGap="5.0" layoutX="528.0" layoutY="576.0" mnemonicParsing="false" onAction="#insertarPremiosB" prefHeight="50" prefWidth="200" style="-fx-background-color: white; -fx-border-radius: 5px; -fx-border-color: black;" text="INSERTAR PREMIOS" textAlignment="CENTER" />
+    <Button graphicTextGap="5.0" layoutX="317.0" layoutY="576.0" mnemonicParsing="false" onAction="#buscarPersonaB" prefHeight="50" prefWidth="200" style="-fx-background-color: white; -fx-border-radius: 5px; -fx-border-color: black;" text="BUSCAR" textAlignment="CENTER" />
+    <Button graphicTextGap="5.0" layoutX="739.0" layoutY="576.0" mnemonicParsing="false" onAction="#exportarB" prefHeight="50" prefWidth="200" style="-fx-background-color: white; -fx-border-radius: 5px; -fx-border-color: black;" text="EXPORTAR PREMIOS" textAlignment="CENTER" />
+    <TextField fx:id="textArea" layoutX="70.0" layoutY="584.0" promptText="Nombre">
+        <font>
+            <Font size="18.0" />
+        </font>
+    </TextField>
+</Pane>

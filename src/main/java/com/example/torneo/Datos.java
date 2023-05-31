@@ -1,16 +1,14 @@
 package com.example.torneo;
 
-import com.example.torneo.conexion;
-
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.sql.*;
 
-public class datos {
+public class Datos {
     public static void importarbase() throws SQLException {
-        Connection cnx = conexion.getConnexion();
+        Connection cnx = HelloApplication.getConnexion();
         Statement stm = cnx.createStatement();
         ResultSet rs = stm.executeQuery("drop database if exists torneo");
         ResultSet rs2 = stm.executeQuery("Create database torneo");
@@ -26,9 +24,9 @@ public class datos {
         rs6.close();
         stm.close();
     }
-    public static void importarParticipantes() throws SQLException, IOException {
+    public static void importarParticipantes() throws SQLException {
         BufferedReader br = null;
-        BufferedReader br2 = null;
+        BufferedReader br2;
         try {
             br = new BufferedReader(new FileReader("ParticipantesTorneoA.csv"));
             br2 = new BufferedReader(new FileReader("ParticipantesTorneoB.csv"));
@@ -50,7 +48,7 @@ public class datos {
 
     public static void insertParticipantes(BufferedReader br ) throws IOException, SQLException {
         String linea;
-        Connection cnx = conexion.getConnexion();
+        Connection cnx = HelloApplication.getConnexion();
         PreparedStatement pstm = cnx.prepareStatement("Insert into participantes values (?,?,?,?,?,?,?)");
         while ((linea = br.readLine()) != null) {
             String[] partes = linea.split("\\|");
@@ -78,9 +76,9 @@ public class datos {
         }
     }
 
-    public static void importarClasificacion() throws SQLException, IOException {
+    public static void importarClasificacion() throws SQLException {
         BufferedReader br = null;
-        BufferedReader br2 = null;
+        BufferedReader br2;
         try {
             br = new BufferedReader(new FileReader("ClasificacionTorneoA.csv"));
             br2 = new BufferedReader(new FileReader("ClasificacionTorneoB.csv"));
@@ -101,7 +99,7 @@ public class datos {
     }
     public static void insertClasificacion(BufferedReader br ) throws IOException, SQLException {
         String linea;
-        Connection cnx = conexion.getConnexion();
+        Connection cnx = HelloApplication.getConnexion();
         PreparedStatement pstm = cnx.prepareStatement("Insert into clasificacion (posicion, torneo, ranking, nombre, fide, origen) values (?,?,?,?,?,?)");
         while ((linea = br.readLine()) != null) {
             String[] partes = linea.split("\\|");
@@ -126,9 +124,9 @@ public class datos {
             }
         }
     }
-    public static void importarPremios() throws SQLException, IOException {
+    public static void importarPremios() throws SQLException {
         BufferedReader br = null;
-        BufferedReader br2 = null;
+        BufferedReader br2;
         try {
             br = new BufferedReader(new FileReader("PremiosTorneoA.csv"));
             br2 = new BufferedReader(new FileReader("PremiosTorneoB.csv"));
@@ -149,7 +147,7 @@ public class datos {
     }
     public static void insertPremios(BufferedReader br ) throws IOException, SQLException {
         String linea;
-        Connection cnx = conexion.getConnexion();
+        Connection cnx = HelloApplication.getConnexion();
         PreparedStatement pstm = cnx.prepareStatement("Insert into premios (id, posicion, torneo, tipo_premio, ganador, cantidad) values (?,?,?,?,?,?)");
         while ((linea = br.readLine()) != null) {
             String[] partes = linea.split("\\|");
@@ -176,7 +174,7 @@ public class datos {
     }
 
     public static void importarbase2() throws SQLException {
-        Connection cnx = conexion.getConnexion();
+        Connection cnx = HelloApplication.getConnexion();
         Statement stm = cnx.createStatement();
         ResultSet rs = stm.executeQuery("drop table if exists optaA");
         ResultSet rs2 = stm.executeQuery("create table optaA as select c.posicion, pa.nombre, pa.fide, pa.origen, pa.hotel from participantes pa left join clasificacion c on pa.nombre = c.nombre where pa.torneo = 'A' order by c.posicion");

@@ -8,7 +8,7 @@
         <content>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="550.0" prefWidth="1018.0">
                 <children>
-                    <TableView fx:id="tablaA" prefHeight="550.0" prefWidth="1018.0">
+                    <TableView fx:id="tablaB" prefHeight="550.0" prefWidth="1018.0">
                         <columns>
                             <TableColumn fx:id="columRanking" prefWidth="75.0" text="Ranking" />
                             <TableColumn fx:id="columNombre" prefWidth="300.0" text="Nombre" />
@@ -22,7 +22,7 @@
                 </children></AnchorPane>
         </content>
     </ScrollPane>
-   <Button graphicTextGap="5.0" layoutX="425.0" layoutY="575.0" mnemonicParsing="false" onAction="#insertarFilasA" prefHeight="50" prefWidth="200" style="-fx-background-color: white; -fx-border-radius: 5px; -fx-border-color: black;" text="MOSTRAR PARTICIPANTES" textAlignment="CENTER" />
-   <Button graphicTextGap="5.0" layoutX="100.0" layoutY="580.0" mnemonicParsing="false" onAction="#añadirParticipante" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: white; -fx-border-radius: 5px; -fx-border-color: black;" text="AÑADIR" textAlignment="CENTER" />
-   <Button graphicTextGap="5.0" layoutX="810.0" layoutY="580.0" mnemonicParsing="false" onAction="#actualizarParticipante" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: white; -fx-border-radius: 5px; -fx-border-color: black;" text="ACTUALIZAR" textAlignment="CENTER" />
+    <Button graphicTextGap="5.0" layoutX="425.0" layoutY="575.0" mnemonicParsing="false" onAction="#insertarFilasB" prefHeight="50" prefWidth="200" style="-fx-background-color: white; -fx-border-radius: 5px; -fx-border-color: black;" text="MOSTRAR PARTICIPANTES" textAlignment="CENTER" />
+    <Button graphicTextGap="5.0" layoutX="100.0" layoutY="580.0" mnemonicParsing="false" onAction="#añadirParticipante" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: white; -fx-border-radius: 5px; -fx-border-color: black;" text="AÑADIR" textAlignment="CENTER" />
+    <Button graphicTextGap="5.0" layoutX="810.0" layoutY="580.0" mnemonicParsing="false" onAction="#actualizarParticipante" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: white; -fx-border-radius: 5px; -fx-border-color: black;" text="ACTUALIZAR" textAlignment="CENTER" />
 </Pane>

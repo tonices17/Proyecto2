@@ -4,27 +4,27 @@
 'Ranking inicial   '||||||||||
 'Ran.'|'Tít.'|'Nombre'|'Fed.'|'FIDE'|'Nac.'|'FIDE ID'|'ID Nac.'|'Origen/Club'|'Hotel'|'Torneo'|
 '1'||'Palao, Adriana'|'PER'|'1978'|'1968'|'3805204'|'39325'|'Comunidad Valenciana'|'Si'|'B'|
-'2'||'Place, Nicholas'|'USA'|'1967'|'0'|'30969603'|'0'||'No'|'B'|
+'2'||'Place, Nicholas'|'USA'|'1967'|'0'|'30969603'|'0'||'Si'|'B'|
 '3'||'Saez Gabikagogeaskoa, Oscar'|'ESP'|'1960'|'1990'|'2219387'|'11348'|'FEDC'|'Si'|'B'|
 '4'||'Selva Salvador, Antonio'|'ESP'|'1954'|'1969'|'2223821'|'11994'|'Comunidad Valenciana'|'Si'|'B'|
 '5'||'Ruiz Ureta, Ernesto'|'ESP'|'1929'|'1965'|'22229833'|'1934'|'Castilla y León'|'Si'|'B'|
-'6'||'Cluyts, Marc'|'BEL'|'1923'|'0'|'205257'|'0'||'No'|'B'|
+'6'||'Cluyts, Marc'|'BEL'|'1923'|'0'|'205257'|'0'||'Si'|'B'|
 '7'||'Saber, Anas'|'MAR'|'1920'|'0'|'9000810'|'0'||'Si'|'B'|
 '8'||'Ionita, Emilian-Paul'|'ROU'|'1919'|'0'|'1214381'|'0'||'Si'|'B'|
 '9'||'Urena Casacuberta, Lluis'|'ESP'|'1917'|'1948'|'22244026'|'23195'|'Cataluña'|'Si'|'B'|
-'10'||'Lopez Palomar, Jose'|'ESP'|'1913'|'1893'|'32010176'|'26039'|'Comunidad Valenciana'|'No'|'B'|
-'11'||'Millward, Kevin P'|'ENG'|'1911'|'0'|'404721'|'0'||'Si'|'B'|
-'12'||'Lopez de Turiso, Jose Angel'|'ESP'|'1909'|'1931'|'2207680'|'436'|'Madrid'|'Si'|'B'|
+'10'||'Lopez Palomar, Jose'|'ESP'|'1913'|'1893'|'32010176'|'26039'|'Comunidad Valenciana'|'Si'|'B'|
+'11'||'Millward, Kevin P'|'ENG'|'1911'|'0'|'404721'|'0'||'No'|'B'|
+'12'||'Lopez de Turiso, Jose Angel'|'ESP'|'1909'|'1931'|'2207680'|'436'|'Madrid'|'No'|'B'|
 '13'||'Izquierdo Carbellido, Pablo'|'ESP'|'1900'|'1900'|'24510297'|'28861'|'Comunidad Valenciana'|'Si'|'B'|
-'14'||'Goktepe, Derin'|'USA'|'1895'|'0'|'30951747'|'0'||'No'|'B'|
+'14'||'Goktepe, Derin'|'USA'|'1895'|'0'|'30951747'|'0'||'Si'|'B'|
 '15'||'Spanton, Tim R'|'ENG'|'1895'|'0'|'404802'|'0'||'Si'|'B'|
 '16'||'Roca Cruz, Rafael'|'ESP'|'1894'|'1892'|'32022450'|'11836'|'Comunidad Valenciana'|'Si'|'B'|
 '17'||'Pajuelo Morales, Raul'|'ESP'|'1890'|'1933'|'2231050'|'13564'|'Madrid'|'Si'|'B'|
-'18'||'Izquierdo Arruferia, Joseba'|'ESP'|'1887'|'1910'|'22202722'|'21040'|'País Vasco'|'No'|'B'|
+'18'||'Izquierdo Arruferia, Joseba'|'ESP'|'1887'|'1910'|'22202722'|'21040'|'País Vasco'|'Si'|'B'|
 '19'||'Martin Martin, Luis Vicente'|'ESP'|'1886'|'1938'|'2220300'|'1267'|'Madrid'|'Si'|'B'|
 '20'||'Prieto, Alberto'|'USA'|'1886'|'0'|'2083426'|'0'||'Si'|'B'|
 '21'||'Nwachukwu, Chino'|'NGR'|'1885'|'0'|'8500770'|'0'||'Si'|'B'|
-'22'||'Camison Zornoza, Cesar'|'ESP'|'1874'|'1887'|'24580376'|'34537'|'Comunidad Valenciana'|'No'|'B'|
+'22'||'Camison Zornoza, Cesar'|'ESP'|'1874'|'1887'|'24580376'|'34537'|''|'Si'|'B'|
 '23'||'Diez Viera, Oscar'|'ESP'|'1858'|'1852'|'22201882'|'20975'|'País Vasco'|'Si'|'B'|
 '24'||'Rodriguez Gomez, Vicente'|'ESP'|'1854'|'1856'|'22202668'|'12481'|'Madrid'|'Si'|'B'|
 '25'||'Sanabria Taskila, Jenny Maria'|'ESP'|'1852'|'1849'|'32066139'|'27984'|'Canarias'|'Si'|'B'|
@@ -32,7 +32,7 @@
 '27'||'Williams, Duncan'|'WLS'|'1838'|'0'|'1805592'|'0'||'Si'|'B'|
 '28'||'Martinez Dourado, Daniel'|'ESP'|'1837'|'1836'|'32000669'|'24547'|'Galicia'|'Si'|'B'|
 '29'||'Izagirre Alsua, Aritz'|'ESP'|'1835'|'1848'|'2294001'|'16764'|'País Vasco'|'Si'|'B'|
-'30'||'Ingham, H William'|'ENG'|'1833'|'0'|'451096'|'0'||'No'|'B'|
+'30'||'Ingham, H William'|'ENG'|'1833'|'0'|'451096'|'0'||'Si'|'B'|
 '31'||'Rios Garcia, Miguel'|'ESP'|'1829'|'1846'|'2219000'|'11832'|'Comunidad Valenciana'|'Si'|'B'|
 '32'||'Skielnik, Joseph J'|'ENG'|'1797'|'0'|'423807'|'0'||'Si'|'B'|
 '33'||'Stokes, Paul C'|'ENG'|'1791'|'0'|'419010'|'0'||'Si'|'B'|
@@ -40,79 +40,79 @@
 '35'||'Garcia Bueno, Juan Pablo'|'ESP'|'1788'|'1835'|'2213079'|'6453'|'Aragón'|'Si'|'B'|
 '36'||'Gukasov, Artem'|'ESP'|'1788'|'1795'|'24580112'|'36344'|'Comunidad Valenciana'|'Si'|'B'|
 '37'||'Pedraza Fernandez, Miguel Angel'|'ESP'|'1785'|'1799'|'2275376'|'1618'|'Comunidad Valenciana'|'Si'|'B'|
-'38'||'Mallevaey, Armand'|'FRA'|'1780'|'0'|'36041424'|'0'||'No'|'B'|
+'38'||'Mallevaey, Armand'|'FRA'|'1780'|'0'|'36041424'|'0'||'Si'|'B'|
 '39'||'Kane, Robert'|'ENG'|'1773'|'0'|'420468'|'0'||'Si'|'B'|
 '40'||'Fuster Aguilo, Joan'|'ESP'|'1772'|'1819'|'2286548'|'15916'|'FEDC Baleares'|'Si'|'B'|
-'41'||'Hellmann, Thomas'|'GER'|'1771'|'0'|'24647640'|'0'||'Si'|'B'|
-'42'||'Mallevaey, Guillaume'|'FRA'|'1761'|'0'|'26026120'|'0'||'No'|'B'|
+'41'||'Hellmann, Thomas'|'GER'|'1771'|'0'|'24647640'|'0'||'No'|'B'|
+'42'||'Mallevaey, Guillaume'|'FRA'|'1761'|'0'|'26026120'|'0'||'Si'|'B'|
 '43'||'Rumsey, Victor B'|'ENG'|'1758'|'0'|'432873'|'0'||'Si'|'B'|
 '44'||'Ballina Amandi, Casimiro'|'ESP'|'1748'|'1756'|'2278723'|'1798'||'Si'|'B'|
 '45'||'Mateev, Kaloyan Mateev'|'BUL'|'1735'|'0'|'2936690'|'0'||'Si'|'B'|
-'46'||'Gomez Fernandez, Fulgencio'|'ESP'|'1727'|'1752'|'22273700'|'18088'|'País Vasco'|'No'|'B'|
-'47'||'Hushpit, Lukian'|'UKR'|'1717'|'0'|'14189208'|'0'||'Si'|'B'|
+'46'||'Gomez Fernandez, Fulgencio'|'ESP'|'1727'|'1752'|'22273700'|'18088'|'País Vasco'|'Si'|'B'|
+'47'||'Hushpit, Lukian'|'UKR'|'1717'|'0'|'14189208'|'0'||'No'|'B'|
 '48'||'Lopez Heras, Arturo'|'ESP'|'1715'|'1755'|'2225433'|'438'|'Madrid'|'Si'|'B'|
 '49'||'Hassomal Daswani, Birjkumar'|'ESP'|'1715'|'1730'|'2224356'|'12646'|'Comunidad Valenciana'|'Si'|'B'|
-'50'||'Aadith R'|'IND'|'1714'|'0'|'35050362'|'0'||'No'|'B'|
+'50'||'Aadith R'|'IND'|'1714'|'0'|'35050362'|'0'||'Si'|'B'|
 '51'||'Bergara Ede, Josu'|'ESP'|'1713'|'1819'|'22287965'|'4714'|'País Vasco'|'Si'|'B'|
-'52'||'Vicente Soriano, Josep'|'ESP'|'1713'|'1732'|'2270978'|'2763'|'Cataluña'|'Si'|'B'|
+'52'||'Vicente Soriano, Josep'|'ESP'|'1713'|'1732'|'2270978'|'2763'|'Cataluña'|'No'|'B'|
 '53'||'Nieto Foresti, Julian'|'ESP'|'1709'|'1758'|'54509971'|'33595'|'Baleares'|'Si'|'B'|
-'54'||'Aird, Ian'|'SCO'|'1698'|'0'|'2401347'|'0'||'No'|'B'|
+'54'||'Aird, Ian'|'SCO'|'1698'|'0'|'2401347'|'0'||'Si'|'B'|
 '55'||'Gerona Maura, Jesus'|'ESP'|'1690'|'1720'|'2271303'|'3809'|'Comunidad Valenciana'|'Si'|'B'|
 '56'||'Albuixech Sanz, Jorge'|'ESP'|'1690'|'1698'|'22218149'|'16173'|'Comunidad Valenciana'|'Si'|'B'|
 '57'||'De Luna Butz, Alberto'|'ESP'|'1685'|'1726'|'2269007'|'16160'|'Madrid'|'Si'|'B'|
-'58'||'Minguela Munoz, Bienvenido'|'ESP'|'1683'|'1723'|'2282143'|'13722'|'Madrid'|'No'|'B'|
+'58'||'Minguela Munoz, Bienvenido'|'ESP'|'1683'|'1723'|'2282143'|'13722'|'Madrid'|'Si'|'B'|
 '59'||'Espejo Montagut, Jose Maria'|'ESP'|'1678'|'1694'|'2281619'|'5943'|'Andalucía'|'Si'|'B'|
 '60'||'Muratova, Anel'|'KAZ'|'1669'|'0'|'13707205'|'0'||'Si'|'B'|
-'61'||'Rico Garcia, Carlos'|'ESP'|'1649'|'1670'|'24515132'|'40769'|'Comunidad Valenciana'|'Si'|'B'|
-'62'||'Tsiapko, Andrii'|'UKR'|'1633'|'0'|'34105298'|'0'||'No'|'B'|
+'61'||'Rico Garcia, Carlos'|'ESP'|'1649'|'1670'|'24515132'|'40769'|'Comunidad Valenciana'|'No'|'B'|
+'62'||'Tsiapko, Andrii'|'UKR'|'1633'|'0'|'34105298'|'0'||'Si'|'B'|
 '63'||'Contreras Valle, Juan Carlos'|'ESP'|'1629'|'1643'|'32072317'|'28175'|'Andalucía'|'Si'|'B'|
-'64'||'Nechifor, David'|'ESP'|'1613'|'1621'|'54788455'|'40877'|'Comunidad Valenciana'|'Si'|'B'|
+'64'||'Nechifor, David'|'ESP'|'1613'|'1621'|'54788455'|'40877'|'Comunidad Valenciana'|'No'|'B'|
 '65'||'Grindbakken, Erik'|'NOR'|'1606'|'0'|'1526170'|'0'||'Si'|'B'|
-'66'||'Arribas Lopez, Sara'|'ESP'|'1602'|'1680'|'22205748'|'25311'|'Madrid'|'No'|'B'|
+'66'||'Arribas Lopez, Sara'|'ESP'|'1602'|'1680'|'22205748'|'25311'|'Madrid'|'Si'|'B'|
 '67'||'Sudharsan Gurukrishnan'|'IND'|'1586'|'0'|'46614753'|'0'||'Si'|'B'|
 '68'||'Vegara Gallego, Pere'|'ESP'|'1573'|'1563'|'2271770'|'10846'|'Cataluña'|'Si'|'B'|
 '69'||'Prieto Matias, Manuel'|'ESP'|'1560'|'1615'|'54596270'|'39149'|'Extremadura'|'Si'|'B'|
-'70'||'Medina Sanchez, Gines'|'ESP'|'1556'|'1622'|'2279100'|'16384'|'Canarias'|'No'|'B'|
+'70'||'Medina Sanchez, Gines'|'ESP'|'1556'|'1622'|'2279100'|'16384'|'Canarias'|'Si'|'B'|
 '71'||'Kearsley, Raymond J'|'ENG'|'1548'|'0'|'470562'|'0'||'Si'|'B'|
 '72'||'Pesochinskiy, Stepan'|'ESP'|'1508'|'1564'|'54767997'|'39918'|'Madrid'|'Si'|'B'|
 '73'||'Valenzuela Garcia, Alberto'|'ESP'|'1503'|'0'|'2245213'|'0'|'Comunidad Valenciana'|'Si'|'B'|
-'74'||'Deiana, Giacomo'|'ITA'|'1498'|'0'|'843750'|'0'||'No'|'B'|
-'75'||'Martinez Torres, Jose Manuel'|'ESP'|'1496'|'1544'|'2246660'|'11498'|'FEDC'|'Si'|'B'|
+'74'||'Deiana, Giacomo'|'ITA'|'1498'|'0'|'843750'|'0'||'Si'|'B'|
+'75'||'Martinez Torres, Jose Manuel'|'ESP'|'1496'|'1544'|'2246660'|'11498'|'Comunidad Valenciana'|'Si'|'B'|
 '76'||'Leelajai Krishna N'|'IND'|'1491'|'0'|'25130536'|'0'||'Si'|'B'|
 '77'||'Vander Voort, Patrick'|'BEL'|'1488'|'0'|'205230'|'0'||'Si'|'B'|
-'78'||'Riera Mestres, Josep'|'ESP'|'1484'|'1498'|'22256709'|'24855'|'Cataluña'|'No'|'B'|
+'78'||'Riera Mestres, Josep'|'ESP'|'1484'|'1498'|'22256709'|'24855'|'Cataluña'|'Si'|'B'|
 '79'||'Swapna C N'|'IND'|'1481'|'0'|'45050449'|'0'||'Si'|'B'|
 '80'||'Conde Negro, Francisco Javier'|'ESP'|'1479'|'1734'|'2261790'|'5439'|'Castilla y León'|'Si'|'B'|
 '81'||'Milner, Romi'|'USA'|'1469'|'0'|'30997690'|'0'||'Si'|'B'|
-'82'||'Such Palacios, Jose Miguel'|'ESP'|'1465'|'1485'|'2251485'|'27535'|'Comunidad Valenciana'|'No'|'B'|
+'82'||'Such Palacios, Jose Miguel'|'ESP'|'1465'|'1485'|'2251485'|'27535'|'Comunidad Valenciana'|'Si'|'B'|
 '83'||'Quintana Ruiz, David'|'ESP'|'1460'|'0'|'54599083'|'0'|'Comunidad Valenciana'|'Si'|'B'|
 '84'||'Sai Hrushikesh Simhdri'|'IND'|'1460'|'0'|'45058105'|'0'||'Si'|'B'|
 '85'||'Suriya S V'|'IND'|'1455'|'0'|'46681604'|'0'||'Si'|'B'|
-'86'||'Rincon Martin, Santiago'|'ESP'|'1454'|'1476'|'2286890'|'15687'|'FEDC'|'No'|'B'|
+'86'||'Rincon Martin, Santiago'|'ESP'|'1454'|'1476'|'2286890'|'15687'|'FEDC'|'Si'|'B'|
 '87'||'Verhoeven, Rudiger'|'ESP'|'1454'|'1473'|'24563013'|'31192'|'Andalucía'|'Si'|'B'|
 '88'||'Garcia Diaz, Jose'|'ESP'|'1443'|'1465'|'24538329'|'32523'|'FEDC'|'Si'|'B'|
 '89'||'Albuixech Soler, Sergi'|'ESP'|'1437'|'1466'|'24522678'|'30574'|'Comunidad Valenciana'|'Si'|'B'|
-'90'||'Rodriguez Dogmoch, Kyran'|'ESP'|'1437'|'1444'|'54758017'|'42316'|'Andalucía'|'No'|'B'|
-'91'||'Perez Solanas, Hugo'|'ESP'|'1424'|'1265'|'54783526'|'40881'|'Extremadura'|'Si'|'B'|
+'90'||'Rodriguez Dogmoch, Kyran'|'ESP'|'1437'|'1444'|'54758017'|'42316'|'Andalucía'|'Si'|'B'|
+'91'||'Perez Solanas, Hugo'|'ESP'|'1424'|'1265'|'54783526'|'40881'|'Extremadura'|'No'|'B'|
 '92'||'Voronaya, Eva'|'FID'|'1379'|'0'|'34254978'|'0'||'Si'|'B'|
 '93'||'Morata Perez, Jose'|'ESP'|'1371'|'1401'|'24521612'|'30727'|'Andalucía'|'Si'|'B'|
-'94'||'Munoz Gonzalez, Martin'|'ESP'|'1352'|'1386'|'22209115'|'24579'|'FEDC'|'No'|'B'|
-'95'||'Mateeva, Yana'|'BUL'|'1329'|'0'|'2935600'|'0'||'Si'|'B'|
-'96'||'Jimenez Mahillo, David'|'ESP'|'1304'|'1372'|'22208151'|'18373'|'FEDC Madrid'|'Si'|'B'|
+'94'||'Munoz Gonzalez, Martin'|'ESP'|'1352'|'1386'|'22209115'|'24579'|'FEDC'|'Si'|'B'|
+'95'||'Mateeva, Yana'|'BUL'|'1329'|'0'|'2935600'|'0'||'No'|'B'|
+'96'||'Jimenez Mahillo, David'|'ESP'|'1304'|'1372'|'22208151'|'18373'|'FEDC Madrid'|'No'|'B'|
 '97'||'Prieto Rol, Esther'|'ESP'|'1299'|'1318'|'54596289'|'40371'|'Extremadura'|'Si'|'B'|
-'98'||'Genis Traveria, Ferran'|'ESP'|'1293'|'1274'|'24519707'|'33014'|'Cataluña'|'No'|'B'|
+'98'||'Genis Traveria, Ferran'|'ESP'|'1293'|'1274'|'24519707'|'33014'|'Cataluña'|'Si'|'B'|
 '99'||'Ortega Moya, Juan Francisco'|'ESP'|'1290'|'1314'|'54718210'|'11650'|'Comunidad Valenciana'|'Si'|'B'|
 '100'||'Mena Lena, Antonio'|'ESP'|'1226'|'1287'|'32010583'|'25784'|'FEDC Extremadura'|'Si'|'B'|
 '101'||'Casadevall Mainau, Iraida'|'ESP'|'1212'|'1337'|'54543142'|'39742'|'FEDC Cataluña'|'Si'|'B'|
-'102'||'Garcia Lorenzo, Jaime'|'ESP'|'1210'|'1243'|'32000138'|'24777'|'FEDC'|'No'|'B'|
+'102'||'Garcia Lorenzo, Jaime'|'ESP'|'1210'|'1243'|'32000138'|'24777'|'FEDC'|'Si'|'B'|
 '103'||'Ulla Centelles, Llorens'|'ESP'|'1205'|'1214'|'24541087'|'30804'|'Comunidad Valenciana'|'Si'|'B'|
 '104'||'Mabras Lloret, Monserrat'|'ESP'|'1202'|'1204'|'32018347'|'36014'|'Comunidad Valenciana'|'Si'|'B'|
 '105'||'Gomez Real, Maria Del Pilar'|'ESP'|'1185'|'1542'|'22207600'|'18101'|'Comunidad Valenciana'|'Si'|'B'|
-'106'||'Galletero Monsalve, Juan Francis'|'ESP'|'1077'|'1126'|'22281398'|'27844'|'FEDC'|'No'|'B'|
+'106'||'Galletero Monsalve, Juan Francis'|'ESP'|'1077'|'1126'|'22281398'|'27844'|'Comunidad Valenciana'|'Si'|'B'|
 '107'||'Ledesma Ledesma, Jose Ignacio'|'ESP'|'1049'|'1087'|'54546281'|'40590'|'FEDC País Vasco'|'Si'|'B'|
 '108'||'Falcon Ibanez, Alicia'|'ESP'|'0'|'1212'|'54593123'|'40589'|'La Rioja'|'Si'|'B'|
-'109'||'Dumanskyi, Matvii'|'UKR'|'0'|'0'|'34159177'|'0'||'Si'|'B'|
-'110'||'Embuena Molina, Miguel Angel'|'ESP'|'0'|'0'|'54745128'|'0'|'Comunidad Valenciana'|'No'|'B'|
+'109'||'Dumanskyi, Matvii'|'UKR'|'0'|'0'|'34159177'|'0'||'No'|'B'|
+'110'||'Embuena Molina, Miguel Angel'|'ESP'|'0'|'0'|'54745128'|'0'|'Comunidad Valenciana'|'Si'|'B'|
 '111'||'Henning Lubberding, Hans'|'IRL'|'0'|'0'|'2518066'|'0'||'Si'|'B'|
 '112'||'Ojassvini Thiagarajan'|'IND'|'0'|'0'|'33381291'|'0'||'Si'|'B'|
 '113'||'Sanchez-Laulhe Garcia-Mercadal,'|'ESP'|'0'|'0'|'54599091'|'0'|'Comunidad Valenciana'|'Si'|'B'|

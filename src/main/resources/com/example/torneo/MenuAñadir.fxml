@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+
+<AnchorPane prefHeight="500.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.torneo.Modificaciones">
+   <children>
+      <Pane prefHeight="500.0" prefWidth="400.0">
+         <children>
+            <Label layoutX="90.0" layoutY="20.0" text="INSERTAR PARTICIPANTE">
+               <font>
+                  <Font name="JetBrains Mono Medium" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="70.0" text="Ranking:">
+               <font>
+                  <Font name="JetBrains Mono Medium" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textRanking" layoutX="146.0" layoutY="71.0" />
+            <Label layoutX="25.0" layoutY="117.0" text="Nombre:">
+               <font>
+                  <Font name="JetBrains Mono Medium" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textNombre" layoutX="146.0" layoutY="118.0" />
+            <Label layoutX="25.0" layoutY="164.0" text="FIDE:">
+               <font>
+                  <Font name="JetBrains Mono Medium" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textFide" layoutX="146.0" layoutY="165.0" />
+            <Label layoutX="25.0" layoutY="211.0" text="IDFIDE:">
+               <font>
+                  <Font name="JetBrains Mono Medium" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textIdfide" layoutX="146.0" layoutY="212.0" />
+            <Label layoutX="25.0" layoutY="258.0" text="Origen:">
+               <font>
+                  <Font name="JetBrains Mono Medium" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textOrigen" layoutX="146.0" layoutY="259.0" />
+            <Label layoutX="25.0" layoutY="305.0" text="Hotel:">
+               <font>
+                  <Font name="JetBrains Mono Medium" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textHotel" layoutX="146.0" layoutY="306.0" />
+            <Label layoutX="25.0" layoutY="352.0" text="Torneo:">
+               <font>
+                  <Font name="JetBrains Mono Medium" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textTorneo" layoutX="146.0" layoutY="353.0" />
+            <Button layoutX="103.0" layoutY="420.0" mnemonicParsing="false" onAction="#botonAñadir" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-radius: 5px; -fx-border-color: black;" text="AÑADIR">
+               <font>
+                  <Font name="JetBrains Mono Medium" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

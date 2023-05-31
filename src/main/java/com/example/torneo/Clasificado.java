@@ -98,7 +98,7 @@ public class Clasificado {
     }
 
     public static ResultSet clasificacionA() throws SQLException {
-        Connection cnx = conexion.getConnexion();
+        Connection cnx = HelloApplication.getConnexion();
         Statement stm = cnx.createStatement();
         ResultSet rs = stm.executeQuery("select * from clasificacion WHERE torneo='A' order by posicion");
 
@@ -109,7 +109,7 @@ public class Clasificado {
     }
 
     public static ResultSet clasificacionB() throws SQLException {
-        Connection cnx = conexion.getConnexion();
+        Connection cnx = HelloApplication.getConnexion();
         Statement stm = cnx.createStatement();
         ResultSet rs = stm.executeQuery("select * from clasificacion WHERE torneo='B' order by posicion");
 

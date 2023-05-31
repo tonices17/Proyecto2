@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -40,60 +41,48 @@ public class ControlParticipantes implements Initializable {
     private final ObservableList<Participantes> data = FXCollections.observableArrayList();
     private int cont;
     @FXML
-    private void insertarFilasA() throws SQLException, IOException {
+    private void insertarFilasA() throws SQLException {
         if(cont == 1){
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("ErrorImport.fxml"));
-            Scene scene = new Scene(fxmlLoader.load());
-            Stage stage = new Stage();
-            stage.setTitle("ERROR");
-            stage.setScene(scene);
-            stage.setResizable(false);
-            stage.show();
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText(null);
+            alert.setTitle("Error");
+            alert.setContentText("Error en la aplicacion");
+            alert.showAndWait();
         }
         while(cont == 0) {
             ResultSet rs = Participantes.mostrarA();
-            while (rs.next()) {
-                int ranking = rs.getInt(1);
-                String nombre = rs.getString(2);
-                int fide = rs.getInt(3);
-                int idfide = rs.getInt(4);
-                String origen = rs.getString(5);
-                String hotel = rs.getString(6);
-                String torneo = rs.getString(7);
-                Participantes participante = new Participantes(ranking, nombre, fide, idfide, origen, hotel, torneo);
-                data.add(participante);
-            }
-            tablaA.setItems(data);
-            cont++;
+            variables(rs, tablaA);
         }
     }
 
+    private void variables(ResultSet rs, TableView<Participantes> tablaA) throws SQLException {
+        while (rs.next()) {
+            int ranking = rs.getInt(1);
+            String nombre = rs.getString(2);
+            int fide = rs.getInt(3);
+            int idfide = rs.getInt(4);
+            String origen = rs.getString(5);
+            String hotel = rs.getString(6);
+            String torneo = rs.getString(7);
+            Participantes participante = new Participantes(ranking, nombre, fide, idfide, origen, hotel, torneo);
+            data.add(participante);
+        }
+        tablaA.setItems(data);
+        cont++;
+    }
+
     @FXML
-    private void insertarFilasB() throws SQLException, IOException {
+    private void insertarFilasB() throws SQLException {
         if(cont == 1){
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("ErrorImport.fxml"));
-            Scene scene = new Scene(fxmlLoader.load());
-            Stage stage = new Stage();
-            stage.setTitle("ERROR");
-            stage.setScene(scene);
-            stage.setResizable(false);
-            stage.show();
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText(null);
+            alert.setTitle("Error");
+            alert.setContentText("Error en la aplicacion");
+            alert.showAndWait();
         }
         while(cont == 0) {
             ResultSet rs = Participantes.mostrarB();
-            while (rs.next()) {
-                int ranking = rs.getInt(1);
-                String nombre = rs.getString(2);
-                int fide = rs.getInt(3);
-                int idfide = rs.getInt(4);
-                String origen = rs.getString(5);
-                String hotel = rs.getString(6);
-                String torneo = rs.getString(7);
-                Participantes participante = new Participantes(ranking, nombre, fide, idfide, origen, hotel, torneo);
-                data.add(participante);
-            }
-            tablaB.setItems(data);
-            cont++;
+            variables(rs, tablaB);
         }
     }
 
@@ -101,7 +90,7 @@ public class ControlParticipantes implements Initializable {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("MenuAñadir.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         Stage stage = new Stage();
-        stage.setTitle("ERROR");
+        stage.setTitle("Adición de participantes");
         stage.setScene(scene);
         stage.setResizable(false);
         stage.show();
@@ -116,5 +105,15 @@ public class ControlParticipantes implements Initializable {
         columOrigen.setCellValueFactory(new PropertyValueFactory<>("origen"));
         columHotel.setCellValueFactory(new PropertyValueFactory<>("Hotel"));
         columTorneo.setCellValueFactory(new PropertyValueFactory<>("torneo"));
+    }
+
+    public void actualizarParticipante() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("MenuActualizar.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = new Stage();
+        stage.setTitle("Aztualización de participantes");
+        stage.setScene(scene);
+        stage.setResizable(false);
+        stage.show();
     }
 }

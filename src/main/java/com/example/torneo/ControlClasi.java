@@ -3,13 +3,11 @@ package com.example.torneo;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
@@ -38,58 +36,47 @@ public class ControlClasi implements Initializable {
     private final ObservableList<Clasificado> data = FXCollections.observableArrayList();
     private int cont;
     @FXML
-    private void insertarFilasA() throws SQLException, IOException {
+    private void insertarFilasA() throws SQLException {
         if(cont == 1){
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("ErrorImport.fxml"));
-            Scene scene = new Scene(fxmlLoader.load());
-            Stage stage = new Stage();
-            stage.setTitle("ERROR");
-            stage.setScene(scene);
-            stage.setResizable(false);
-            stage.show();
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText(null);
+            alert.setTitle("Error");
+            alert.setContentText("Error en la aplicacion");
+            alert.showAndWait();
         }
         while(cont == 0) {
             ResultSet rs = Clasificado.clasificacionA();
-            while (rs.next()) {
-                int posicion = rs.getInt(1);
-                String torneo = rs.getString(2);
-                int ranking = rs.getInt(3);
-                String nombre = rs.getString(4);
-                int fide = rs.getInt(5);
-                String origen = rs.getString(6);
-                Clasificado clasificado = new Clasificado(posicion, torneo, ranking, nombre, fide, origen);
-                data.add(clasificado);
-            }
-            tablaA.setItems(data);
-            cont++;
+            variables(rs, tablaA);
         }
     }
 
+    private void variables(ResultSet rs, TableView<Clasificado> tablaA) throws SQLException {
+        while (rs.next()) {
+            int posicion = rs.getInt(1);
+            String torneo = rs.getString(2);
+            int ranking = rs.getInt(3);
+            String nombre = rs.getString(4);
+            int fide = rs.getInt(5);
+            String origen = rs.getString(6);
+            Clasificado clasificado = new Clasificado(posicion, torneo, ranking, nombre, fide, origen);
+            data.add(clasificado);
+        }
+        tablaA.setItems(data);
+        cont++;
+    }
+
     @FXML
-    private void insertarFilasB() throws SQLException, IOException {
+    private void insertarFilasB() throws SQLException {
         if(cont == 1){
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("ErrorImport.fxml"));
-            Scene scene = new Scene(fxmlLoader.load());
-            Stage stage = new Stage();
-            stage.setTitle("ERROR");
-            stage.setScene(scene);
-            stage.setResizable(false);
-            stage.show();
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText(null);
+            alert.setTitle("Error");
+            alert.setContentText("Error en la aplicacion");
+            alert.showAndWait();
         }
         while(cont == 0) {
             ResultSet rs = Clasificado.clasificacionB();
-            while (rs.next()) {
-                int posicion = rs.getInt(1);
-                String torneo = rs.getString(2);
-                int ranking = rs.getInt(3);
-                String nombre = rs.getString(4);
-                int fide = rs.getInt(5);
-                String origen = rs.getString(6);
-                Clasificado clasificado = new Clasificado(posicion, torneo, ranking, nombre, fide, origen);
-                data.add(clasificado);
-            }
-            tablaB.setItems(data);
-            cont++;
+            variables(rs, tablaB);
         }
     }
     @Override

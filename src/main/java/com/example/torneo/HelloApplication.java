@@ -7,13 +7,13 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.SQLException;
-
-import static com.example.torneo.conexion.getConnexion;
 
 public class HelloApplication extends Application {
 
     static Connection cnx;
+
     static {
         try {
             cnx = getConnexion();
@@ -21,8 +21,9 @@ public class HelloApplication extends Application {
             throw new RuntimeException(e);
         }
     }
+
     @Override
-    public void start(Stage stage) throws IOException, SQLException {
+    public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("BenidormChess.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Benidorm Chess OPEN 2022");
@@ -32,10 +33,26 @@ public class HelloApplication extends Application {
         stage.show();
     }
 
-    public static void main(String[] args) throws SQLException {
-        datos.importarbase();
-        launch();
+    public static Connection getConnexion() throws SQLException {
+        String url = "jdbc:mariadb://localhost:3306/torneo";
+        String user = "root";
+        String password = "root";
+        return DriverManager.getConnection(url, user, password);
     }
 
+    public static void mensajeExito() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Exito.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = new Stage();
+        stage.setTitle("Éxito");
+        stage.setScene(scene);
+        stage.setResizable(false);
+        stage.show();
+    }
 
+    public static void main(String[] args) throws SQLException {
+        Datos.importarbase();
+        launch();
+    }
 }
+

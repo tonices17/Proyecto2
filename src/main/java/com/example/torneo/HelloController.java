@@ -1,29 +1,19 @@
 package com.example.torneo;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.net.URL;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.ResourceBundle;
 
 public class HelloController {
 
     @FXML
     private Button botonSalir;
-    @FXML
-    private TableView<Participantes> clasiA;
+
     @FXML
     private void closeButtonAction(){
         Stage stage = (Stage) botonSalir.getScene().getWindow();
@@ -31,12 +21,12 @@ public class HelloController {
     }
 
     @FXML
-    private void importButtonAction() throws IOException {
+    private void importButtonAction() {
         try {
-            datos.importarParticipantes();
-            datos.importarClasificacion();
-            datos.importarPremios();
-            datos.importarbase2();
+            Datos.importarParticipantes();
+            Datos.importarClasificacion();
+            Datos.importarPremios();
+            Datos.importarbase2();
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("SuccesImport.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
             Stage stage = new Stage();
@@ -45,13 +35,11 @@ public class HelloController {
             stage.setResizable(false);
             stage.show();
         }catch (Exception e){
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("ErrorImport.fxml"));
-            Scene scene = new Scene(fxmlLoader.load());
-            Stage stage = new Stage();
-            stage.setTitle("ERROR");
-            stage.setScene(scene);
-            stage.setResizable(false);
-            stage.show();
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText(null);
+            alert.setTitle("Error");
+            alert.setContentText("Error en la aplicacion");
+            alert.showAndWait();
         }
     }
 

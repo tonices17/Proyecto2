@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.torneo.Actualizaciones">
+    <children>
+        <Pane prefHeight="500.0" prefWidth="400.0">
+            <children>
+                <Label layoutX="90.0" layoutY="20.0" text="ACTUALIZAR PARTICIPANTE">
+                    <font>
+                        <Font name="JetBrains Mono Medium" size="18.0" />
+                    </font>
+                </Label>
+                <Label layoutX="40.0" layoutY="70.0" prefHeight="80.0" prefWidth="324.0" text="Introduce el nombre de la persona que quieres actualizar (apellido, nombre):" wrapText="true">
+                    <font>
+                        <Font name="JetBrains Mono Medium" size="18.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="textNombre" layoutX="118.0" layoutY="164.0" />
+                <Label layoutX="41.0" layoutY="214.0" text="¿Qué campo quieres actualizar?">
+                    <font>
+                        <Font name="JetBrains Mono Medium" size="18.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="textValor" layoutX="115.0" layoutY="352.0" />
+                <Button layoutX="103.0" layoutY="420.0" mnemonicParsing="false" onAction="#actualizarParticipante" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-radius: 5px; -fx-border-color: black;" text="ACTUALIZAR">
+                    <font>
+                        <Font name="JetBrains Mono Medium" size="18.0" />
+                    </font>
+                </Button>
+            <ChoiceBox fx:id="checkBox" layoutX="128.0" layoutY="250.0" prefWidth="150.0" />
+            <Label layoutX="79.0" layoutY="306.0" text="Introduce el nuevo valor:">
+               <font>
+                  <Font name="JetBrains Mono Medium" size="18.0" />
+               </font>
+            </Label>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

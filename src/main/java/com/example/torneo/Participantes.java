@@ -112,7 +112,7 @@ public class Participantes {
     }
 
     public static ResultSet mostrarA() throws SQLException {
-        Connection cnx = conexion.getConnexion();
+        Connection cnx = HelloApplication.getConnexion();
         Statement stm = cnx.createStatement();
         ResultSet rs = stm.executeQuery("select * from participantes WHERE torneo='A' order by ranking");
 
@@ -123,7 +123,7 @@ public class Participantes {
     }
 
     public static ResultSet mostrarB() throws SQLException {
-        Connection cnx = conexion.getConnexion();
+        Connection cnx = HelloApplication.getConnexion();
         Statement stm = cnx.createStatement();
         ResultSet rs2 = stm.executeQuery("select * from participantes WHERE torneo='B' order by ranking");
 
