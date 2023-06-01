@@ -1,11 +1,14 @@
 package com.example.torneo;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
+import java.io.IOException;
+import java.sql.*;
 
 public class Modificaciones {
     @FXML
@@ -49,6 +52,33 @@ public class Modificaciones {
             alert.setTitle("Error");
             alert.setContentText("Error en la aplicacion");
             alert.showAndWait();
+        }
+    }
+
+    public void descalificar() throws SQLException {
+        try {
+            String nombre = textNombre.getText();
+            Connection cnx = HelloApplication.getConnexion();
+            PreparedStatement stm = cnx.prepareStatement(" SET FOREIGN_KEY_CHECKS = 0;");
+            PreparedStatement stm2 = cnx.prepareStatement("DELETE FROM participantes WHERE nombre = ?;");
+            PreparedStatement stm3 = cnx.prepareStatement("DELETE FROM clasificacion WHERE nombre = ?;");
+            PreparedStatement stm4 = cnx.prepareStatement(" SET FOREIGN_KEY_CHECKS = 1;");
+            stm2.setString(1,nombre);
+            stm3.setString(1,nombre);
+            stm.executeUpdate();
+            stm2.executeUpdate();
+            stm3.executeUpdate();
+            stm4.executeUpdate();
+            Datos.importarbase2();
+            HelloApplication.mensajeExito();
+        } catch (NullPointerException e ) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText(null);
+            alert.setTitle("Error");
+            alert.setContentText("Error en la aplicacion");
+            alert.showAndWait();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 }

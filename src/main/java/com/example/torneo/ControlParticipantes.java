@@ -42,12 +42,11 @@ public class ControlParticipantes implements Initializable {
     private int cont;
     @FXML
     private void insertarFilasA() throws SQLException {
-        if(cont == 1){
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setHeaderText(null);
-            alert.setTitle("Error");
-            alert.setContentText("Error en la aplicacion");
-            alert.showAndWait();
+        tablaA.getItems().clear();
+        if(cont >= 1){
+            tablaA.getItems().clear();
+            ResultSet rs = Participantes.mostrarA();
+            variables(rs, tablaA);
         }
         while(cont == 0) {
             ResultSet rs = Participantes.mostrarA();
@@ -73,12 +72,11 @@ public class ControlParticipantes implements Initializable {
 
     @FXML
     private void insertarFilasB() throws SQLException {
-        if(cont == 1){
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setHeaderText(null);
-            alert.setTitle("Error");
-            alert.setContentText("Error en la aplicacion");
-            alert.showAndWait();
+        tablaB.getItems().clear();
+        if(cont >= 1){
+            tablaB.getItems().clear();
+            ResultSet rs = Participantes.mostrarB();
+            variables(rs, tablaB);
         }
         while(cont == 0) {
             ResultSet rs = Participantes.mostrarB();
@@ -112,6 +110,16 @@ public class ControlParticipantes implements Initializable {
         Scene scene = new Scene(fxmlLoader.load());
         Stage stage = new Stage();
         stage.setTitle("Aztualización de participantes");
+        stage.setScene(scene);
+        stage.setResizable(false);
+        stage.show();
+    }
+
+    public void descalificarParticipante() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("MenuDescalificar.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = new Stage();
+        stage.setTitle("Descalificación de participantes");
         stage.setScene(scene);
         stage.setResizable(false);
         stage.show();
