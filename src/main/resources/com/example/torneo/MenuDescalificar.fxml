@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="350.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.torneo.Modificaciones">
+    <children>
+        <Pane prefHeight="350.0" prefWidth="400.0">
+            <children>
+                <Label layoutX="90.0" layoutY="20.0" text="DESCALIFICAR PARTICIPANTE">
+                    <font>
+                        <Font name="JetBrains Mono Medium" size="18.0" />
+                    </font>
+                </Label>
+                <Label layoutX="40.0" layoutY="70.0" prefHeight="80.0" prefWidth="324.0" text="Introduce el nombre de la persona que quieres descalificar (apellido, nombre):" wrapText="true">
+                    <font>
+                        <Font name="JetBrains Mono Medium" size="18.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="textNombre" layoutX="118.0" layoutY="164.0" />
+                <Button graphicTextGap="5.0" layoutX="103.0" layoutY="225.0" mnemonicParsing="false" onAction="#descalificar" prefHeight="50" prefWidth="200" style="-fx-background-color: white; -fx-border-radius: 5px; -fx-border-color: black;" text="DESCALIFICAR" textAlignment="CENTER" />
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>
